@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "conditions": {
+            "symptom": ["frequent quarrels", "strained relationship"],
+            "context": ["introverted", "unable to communicate effectively", "relationship with mother"]
+        },
+        "recommendation": "Adopt a friendly tone similar to how you speak with friends. Practice praising your mother genuinely, highlighting her positive traits such as 'efficiency' and 'good figure.'",
+        "goal": "Develop a harmonious and supportive relationship with her mother.",
+        "key_insight": "Focusing on the strengths of others can improve relationships and reduce conflicts."
+    },
+    {
+        "id": 2,
+        "conditions": {
+            "symptom": ["frequent quarrels", "classroom disruptions"],
+            "context": ["misunderstandings during item exchanges", "affecting class harmony"]
+        },
+        "recommendation": "Use scaling techniques to evaluate classroom behavior and set incremental improvement goals. Seek help from peers to manage emotions during conflicts.",
+        "goal": "Improve peer relationships and maintain classroom harmony.",
+        "key_insight": "Scaling questions help individuals reflect on their behavior and identify actionable steps for improvement."
+    },
+    {
+        "id": 3,
+        "conditions": {
+            "symptom": ["desire to reconcile", "frustration in foster home"],
+            "context": ["feeling misunderstood and unsupported", "strong desire to return home"]
+        },
+        "recommendation": "Wait for a calm moment to apologize sincerely and communicate needs to parents. Follow rules and demonstrate responsibility in daily actions.",
+        "goal": "Restore trust and build a stronger connection with parents.",
+        "key_insight": "Sincere communication and incremental trust-building can mend strained family relationships."
+    },
+    {
+        "id": 4,
+        "conditions": {
+            "symptom": ["feelings of loneliness", "isolation among peers"],
+            "context": ["struggles with making friends", "perceives herself as excluded by classmates"]
+        },
+        "recommendation": "Use scaling questions to redefine friendship levels and identify existing positive relationships. Encourage small actions to strengthen connections, such as eating together or helping with studies.",
+        "goal": "Build meaningful friendships and reduce feelings of isolation.",
+        "key_insight": "Small, actionable steps toward social connections can significantly improve interpersonal relationships."
+    },
+    {
+        "id": 5,
+        "conditions": {
+            "symptom": ["acute stress reaction", "fear and flashbacks"],
+            "context": ["post-traumatic stress symptoms", "repetitive memories of the earthquake"]
+        },
+        "recommendation": "Normalize reactions to trauma through education. Use deep breathing exercises to alleviate physical symptoms and focus on positive self-qualities through guided discussions.",
+        "goal": "Stabilize emotions and restore normal family and social functions.",
+        "key_insight": "Acknowledging and affirming positive behaviors can empower individuals to recover from trauma."
+    },
+    {
+        "id": 6,
+        "conditions": {
+            "symptom": ["guilt", "strained relationships after conflict"],
+            "context": ["fear of rejection", "struggles to initiate reconciliation with roommate"]
+        },
+        "recommendation": "Identify small actions, such as nodding or initiating light conversations, to gradually improve the relationship. Use positive affirmations to build confidence.",
+        "goal": "Ease tensions and rebuild a friendly relationship with the roommate.",
+        "key_insight": "Small, deliberate actions can lead to significant improvements in strained relationships."
+    }
+]

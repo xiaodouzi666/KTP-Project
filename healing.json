@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Relaxation and Visualization",
+        "conditions": {
+            "symptom": ["stress", "mental fatigue", "difficulty relaxing"],
+            "context": ["high workload", "anxiety about performance"]
+        },
+        "steps": [
+            "Sit comfortably with your back straight, hands forming a wisdom mudra on your knees.",
+            "Close your eyes slightly and focus on your breathing. Inhale deeply, feeling your abdomen expand, and exhale, releasing all the tension.",
+            "Visualize yourself lying on a green meadow, surrounded by colorful flowers, a clear blue sky, and gentle breezes.",
+            "Listen to the sounds of nature—streams, birds, and waterfalls—and allow your body to relax further.",
+            "Imagine becoming a peaceful white cloud, floating freely in the sky."
+        ],
+        "effects": [
+            "Promotes deep relaxation and mental clarity.",
+            "Relieves tension and enhances overall well-being."
+        ],
+        "duration": "10-15 minutes",
+        "insights": "Visualization helps create a sense of peace and connection with nature, aiding in stress relief and mental calmness."
+    },
+    {
+        "id": 2,
+        "title": "Hypnosis for Deep Relaxation",
+        "conditions": {
+            "symptom": ["insomnia", "physical tension", "anxiety"],
+            "context": ["struggles with falling asleep", "persistent worry"]
+        },
+        "steps": [
+            "Lie flat on a comfortable surface with your spine straight. Cover yourself with a light blanket if needed.",
+            "Close your eyes and imagine scanning your body from head to toe, releasing tension in every part.",
+            "Take deep breaths, imagining inhaling cosmic energy and exhaling all tension and negativity.",
+            "Visualize lying on a vast grassland, feeling the warmth of the sun and the breeze on your skin.",
+            "Gradually enter a deeper state of hypnosis, imagining descending a staircase with each step bringing more relaxation."
+        ],
+        "effects": [
+            "Deepens the state of physical and mental relaxation.",
+            "Reduces anxiety and enhances focus."
+        ],
+        "duration": "15-20 minutes",
+        "insights": "Guided hypnosis can help individuals access their subconscious mind for greater emotional balance and self-awareness."
+    },
+    {
+        "id": 3,
+        "title": "Emotional Release through Visualization",
+        "conditions": {
+            "symptom": ["negative emotions", "anxiety", "emotional distress"],
+            "context": ["persistent worries", "difficulty letting go of negative thoughts"]
+        },
+        "steps": [
+            "Imagine scanning your body and identifying areas of tension or discomfort.",
+            "Visualize turning negative emotions (e.g., anxiety, worry) into black smoke and exhaling it out of your body.",
+            "Repeat the visualization process until the black smoke turns lighter and disappears.",
+            "Shift perspective and imagine viewing yourself from above, identifying the positive effects of challenges in your life.",
+            "Affirm positive beliefs, such as confidence and resilience, to replace negative thought patterns."
+        ],
+        "effects": [
+            "Releases pent-up negative emotions and promotes emotional clarity.",
+            "Encourages positive thinking and personal growth."
+        ],
+        "duration": "10-15 minutes",
+        "insights": "Transforming negative emotions into visual elements and releasing them can enhance emotional resilience and mental clarity."
+    }
+]

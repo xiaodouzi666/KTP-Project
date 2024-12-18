@@ -1,0 +1,85 @@
+Counselor: What problem do you want to solve today? [Open-ended question]
+
+Client: I feel very tired recently and don’t want to move.
+
+Counselor: Tell me more so that I can understand your problem more clearly. [Specification technique]
+
+Client: I have been under great pressure from homework and work recently and I don’t know what to do?
+
+Counselor: You just mentioned that you have problems with homework pressure and work pressure. I wonder if you want to talk about homework pressure first or work pressure first? [Multiple choice questions]
+
+Client: I want to talk about homework pressure first because the exam is coming soon and I still can’t concentrate when I study.
+
+Counselor: Talk more about not concentrating when studying. [Discussion: Specification or repetition technique]
+
+Client: I am very focused in class, but it seems that my ability to understand is not fully utilized. And my memory is very poor, so I forget everything when I get home.
+
+Counselor: Although you are very focused in class, you can’t remember the content of the class because of your poor understanding and memory, so you feel very upset. [Content and emotional response]
+
+Client: Yes.
+
+Counselor: It sounds like your problem is not about inattention, but about comprehension and memory, right? [Closed-ended question]
+
+Client: It should be related to poor memory. In fact, I like classes very much, but I don’t like the pressure of exams.
+
+Counselor: I still don’t understand your problem. What is the relationship between your poor memory and exam pressure? [Specification technique]
+
+Client: Of course it is related. I like classes very much, but I don’t like to remember things (laughing).
+
+Counselor: What makes you not want to remember things? [Specification technique]
+
+Client: I don’t know.
+
+Counselor: Do you think I am right? Your problem is that you have a poor memory, but you need to remember things during the exam, which causes exam pressure. You want to know what makes you not want to remember things. Is this correct? [Content response, feedback in]
+
+Client: Yes, yes! For example, although I like Chinese class very much, I don’t understand why the teacher has to remember those rigid things. Especially when taking the test, you need to memorize everything. I don't like this kind of test. For example, when I was taking calculus, I didn't understand what the teacher said, so I felt annoyed when I was in class.
+
+Counselor: When you encounter subjects that require rote memorization or understanding, you get a headache. [Content response]
+
+Client: Yes! That's right. Also, when taking the test, I need to force myself to read and remember, but after the test, I forget everything. To be honest, I haven't learned anything after studying for a year.
+
+Counselor: Let me sort out what we just talked about to see if my understanding of you is correct. Your problem seems to be related to test pressure, and test pressure seems to be related to your poor memory and poor comprehension. For example, when you are about to take the test, you are required to memorize the textbooks and use your comprehension, which will cause you stress.
+
+Client: To be honest, I spent a year in class and studying, but I didn't learn anything or absorb anything. Just like that, after the class, then the test, I forget everything after the test. Even when I don’t have exams, I still forget what I read. So I often wonder why I have to study. The answer is for that diploma.
+
+Counselor: You study so hard for the diploma. [Emotional Response Technique]
+
+Client: Yes. What should I do?
+
+Counselor: This question seems to bother you. [Emotional Response Technique]
+
+Client: Yes. I don’t know what to do.
+
+Counselor: You mean, how to improve your memory and comprehension? [Closed Question]
+
+Client: Yes! If there are no exams, I will be happy in class, but I will forget very quickly because I don’t like to use my brain at all.
+
+Counselor: You don’t like to use your brain at all. ([Repetitive Technique])
+
+Client: Yes! Asking me to remember things or events will make me feel tired.
+
+Counselor: Asking you to remember things or events will make you feel very hard. [Content Response] It sounds like your problem is more related to your mentality of not wanting to use your brain. [Content Expression]
+
+Client: I don’t know, I really don’t know.
+
+Counselor: Let's discuss this from another angle to see if it can help you. Tell me about your class situation? [Open-ended question]
+
+Seeker: The class situation is very good!
+
+Counselor: Maybe I can say this, talk about your experience of not wanting to use your brain in class. [Open-ended question]
+
+Seeker: I don't know. Maybe not wanting to use my brain has something to do with my age, because in class, I can't connect some concepts. Just like when I was taking intermediate accounting, because I had never learned it before, when the teacher explained it in class, I did understand it, but every time after class, I forgot it. In addition, my own foundation is not good, and I don't want to... For example, the teacher asked us to find some very important information, but I didn't want to find it. How to say this, I don't know how to say it, for example, when the teacher asked us to apply the formulas we learned before to try, I forgot all those formulas, even the most basic formulas, but because I didn't want to look up the book again, of course I couldn't calculate it. So, the class is very interesting, but when I can't calculate it, I will feel very annoyed and forget it quickly.
+
+Counselor: In addition to not wanting to use your brain in class, you seem to be quite passive in learning. For example, if you are asked to find important information or look up formulas in books, you don’t want to do it. [Content response]
+
+Client: Yes! I just don’t want to look up old information. Just like you said, I am very passive. Even if I have questions in class, I don’t want to ask because I don’t know how to ask. Maybe my expression ability is not good. Just like I spent a lot of time studying intermediate accounting, but when the questions were handed out, I found that I couldn’t write them. Then, after taking all the exams, I regretted that I didn’t do well in the exams because I didn’t spend a lot of time preparing for the exams. I attributed it to my poor comprehension ability. In other words, if the exam questions were copied from the textbook, I might still be able to write them. But if the questions were slightly changed, I wouldn’t be able to write them. I think it might be because I didn’t want to understand when I was studying.
+
+Counselor: Because you didn’t spend more time understanding the content of the textbook, you wouldn’t be able to write them as long as the questions were changed, so you regretted not spending time to understand them. [Discussion]
+
+The client: I didn’t really put any effort into understanding. I just thought I could just memorize it.
+
+Counselor: Just memorize it. [Repetitive Technique]
+
+The client: Yes. I was like this when I was studying. Especially when I saw a very thick book with dense words, I didn’t want to read it.
+
+Counselor: If you see that the book you should read is very thick or has a lot of words in it, it will make you feel very annoyed. It sounds like your problem is not poor memory or poor comprehension, but that you don’t want to spend time thinking and reading.

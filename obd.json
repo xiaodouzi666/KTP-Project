@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "title": "Understanding 'Facts are Facts'",
+        "conditions": {
+            "symptom": ["obsessive thoughts", "difficulty controlling emotions"],
+            "context": ["struggling with feelings", "seeking solace in facts"]
+        },
+        "advice": "Acknowledge that emotions are normal and focus on completing tasks regardless of feelings. Communicate with trusted individuals to gain perspective.",
+        "key_insights": "Accepting negative feelings as facts reduces self-focus and promotes action. Overanalyzing often exacerbates distress.",
+        "date": "June 1, 2012"
+    },
+    {
+        "id": 2,
+        "title": "Dealing with Neurotic Tendencies",
+        "conditions": {
+            "symptom": ["confusion", "frustration due to symptom elimination"],
+            "context": ["trying to act solely to eliminate symptoms", "difficulty finding purpose"]
+        },
+        "advice": "Instead of focusing on eliminating symptoms, follow inner desires to do meaningful tasks despite the symptoms.",
+        "key_insights": "Shifting focus from eliminating symptoms to embracing actions reduces self-centeredness and aids recovery.",
+        "date": "June 2, 2012"
+    },
+    {
+        "id": 3,
+        "title": "Handling Post-Exam Regret",
+        "conditions": {
+            "symptom": ["regret", "trapped by neurotic thoughts"],
+            "context": ["disclosing symptoms before exams", "increased self-awareness and distress"]
+        },
+        "advice": "Avoid discussing symptoms with others as it increases self-awareness and distress. Redirect focus outward by engaging in daily tasks and connecting with others.",
+        "key_insights": "Excessive self-focus amplifies distress. Engaging with external activities helps alleviate neurotic symptoms.",
+        "date": "June 9, 2012"
+    },
+    {
+        "id": 4,
+        "title": "Balancing Self-Reflection and Action",
+        "conditions": {
+            "symptom": ["dissatisfaction with tasks", "debating between reflection and action"],
+            "context": ["difficulty moving on from past mistakes", "fear of inadequate progress"]
+        },
+        "advice": "Reflect on areas for improvement without letting it hinder progress. Begin the next task while learning from past mistakes.",
+        "key_insights": "Balancing reflection and forward momentum is key to overcoming neurotic tendencies.",
+        "date": "October 2, 2012"
+    },
+    {
+        "id": 5,
+        "title": "Managing Overthinking and Free Time",
+        "conditions": {
+            "symptom": ["overthinking", "anxiety during idle moments"],
+            "context": ["difficulty balancing activity and rest", "unmotivation due to overthinking"]
+        },
+        "advice": "Engage in tasks to reduce overthinking but accept that random thoughts are normal. Practice moderation between activity and rest.",
+        "key_insights": "Acknowledging overthinking as normal prevents it from becoming a source of distress. Moderation is essential for mental balance.",
+        "date": "February 3, 2013"
+    },
+    {
+        "id": 6,
+        "title": "Recognizing Personal Limits",
+        "conditions": {
+            "symptom": ["pushing beyond capacity", "worsening outcomes"],
+            "context": ["attempting tasks exceeding abilities", "struggling with limits"]
+        },
+        "advice": "Focus on achievable tasks and excel in them. Avoid forcing yourself into areas that exceed your abilities.",
+        "key_insights": "Recognizing personal limits and focusing on strengths fosters sustainable progress.",
+        "date": "February 8, 2013"
+    }
+]

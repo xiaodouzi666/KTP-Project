@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "conditions": {
+            "symptom": ["anxiety", "academic pressure", "exam results"],
+            "context": ["numerous assignments", "incomplete internship tasks", "overwhelming workload"]
+        },
+        "recommendation": "Develop a study plan with clear priorities. Reward yourself for completing assignments or exam preparation tasks to maintain motivation.",
+        "goal": "Manage academic workload and reduce anxiety.",
+        "key_insight": "Structured planning with self-reward mechanisms can effectively alleviate academic pressure."
+    },
+    {
+        "id": 2,
+        "conditions": {
+            "symptom": ["feeling anxious", "unmotivated", "struggling with daily tasks"],
+            "context": ["multiple student organizations", "difficulty balancing academics and extracurriculars"]
+        },
+        "recommendation": "Focus on time management strategies and set realistic priorities for both academics and extracurriculars.",
+        "goal": "Enhance time management and reduce daily stress.",
+        "key_insight": "Effective time management helps balance academic and extracurricular responsibilities."
+    },
+    {
+        "id": 3,
+        "conditions": {
+            "symptom": ["fatigue", "overwhelmed by homework", "poor memory and focus"],
+            "context": ["upcoming exams", "high attentiveness in class", "inability to retain information"]
+        },
+        "recommendation": "Use repetition and structured learning techniques to improve retention and understanding. Break tasks into smaller, manageable parts.",
+        "goal": "Improve memory retention and manage academic pressure effectively.",
+        "key_insight": "Breaking tasks into smaller parts and using repetition improves cognitive retention."
+    },
+    {
+        "id": 4,
+        "conditions": {
+            "symptom": ["panicked", "scared about exams", "fear of disappointing parents"],
+            "context": ["concerns about preparation", "using relaxation techniques temporarily"]
+        },
+        "recommendation": "Practice relaxation methods before studying and use positive affirmations to build confidence. Seek support from mentors or counselors if anxiety persists.",
+        "goal": "Build exam confidence and reduce performance anxiety.",
+        "key_insight": "Combining relaxation techniques with mentorship can reduce exam-related anxiety."
+    },
+    {
+        "id": 5,
+        "conditions": {
+            "symptom": ["high stress", "declining academic performance", "lack of motivation"],
+            "context": ["previously an excellent student", "hesitant to share struggles with parents"]
+        },
+        "recommendation": "Communicate openly with parents or trusted individuals for emotional support. Participate in community activities to build social connections and reduce isolation.",
+        "goal": "Restore academic motivation and enhance social support.",
+        "key_insight": "Open communication and community support can restore motivation and reduce stress."
+    }
+]

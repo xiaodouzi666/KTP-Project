@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Li Ming",
+        "age": 24,
+        "conditions": {
+            "symptom": ["severe depression", "suicidal thoughts", "feelings of hopelessness"],
+            "context": ["failed postgraduate exams", "family pressure", "recent breakup"]
+        },
+        "recommendation": "Work together to rebuild self-confidence and find solutions. Set short-term goals like finding a stable job and establishing a routine. Seek professional help for stress management.",
+        "goal": "Alleviate suicidal thoughts, rebuild confidence, and improve life satisfaction.",
+        "key_insight": "Addressing the root causes of stress and providing achievable goals can help individuals regain hope and control."
+    },
+    {
+        "id": 2,
+        "name": "Li Ming",
+        "age": 35,
+        "conditions": {
+            "symptom": ["severe sadness", "insomnia", "loss of appetite", "suicidal thoughts"],
+            "context": ["lost mother", "intense grief", "hallucinations"]
+        },
+        "recommendation": "Normalize grief reactions and suggest participating in memorial activities. Set short-term goals like regular meals and daily exercise. Reassure the individual of their value and encourage open communication.",
+        "goal": "Help the client manage grief, regain emotional stability, and rebuild hope for the future.",
+        "key_insight": "Encouraging healthy grieving and practical routines can provide stability during emotional turmoil."
+    },
+    {
+        "id": 3,
+        "name": "Zhang Qiang",
+        "age": 35,
+        "conditions": {
+            "symptom": ["severe sadness", "insomnia", "loss of appetite", "feelings of worthlessness"],
+            "context": ["significant financial loss", "feelings of failure", "suicidal thoughts"]
+        },
+        "recommendation": "Help Zhang Qiang acknowledge and accept financial loss. Encourage relaxing activities like meditation and yoga. Recall past successes to rebuild confidence.",
+        "goal": "Help Zhang Qiang cope with financial loss, relieve sadness, and eliminate suicidal thoughts.",
+        "key_insight": "Acknowledging loss and focusing on past successes can help restore confidence and emotional balance."
+    }
+]

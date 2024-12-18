@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "name": "Mr. Wang",
+        "age": 28,
+        "occupation": "Senior Software Engineer at Alibaba",
+        "conditions": {
+            "symptom": ["anxiety", "irritability", "lack of clarity about future"],
+            "context": ["unreasonable tasks", "long working hours", "financial stress"]
+        },
+        "recommendation": "Practice emotional management techniques such as deep breathing and mindfulness. Set small, achievable goals like stabilizing his job and improving skills. Communicate effectively with the leader by organizing a work plan and suggesting adjustments. Explore other job opportunities if necessary.",
+        "goal": "Alleviate work-related stress, improve emotional resilience, and explore career development opportunities.",
+        "key_insight": "Combining emotional management with proactive career planning can help reduce work pressure and improve mental well-being."
+    },
+    {
+        "id": 2,
+        "name": "Li Qiang",
+        "age": 28,
+        "occupation": "Factory Assembly Line Worker",
+        "conditions": {
+            "symptom": ["stress", "anger", "emotional outbursts"],
+            "context": ["high-intensity tasks", "long hours", "limited social support"]
+        },
+        "recommendation": "Learn relaxation techniques like deep breathing and meditation. Build emotional resilience by recognizing triggers for anger and practicing self-regulation. Seek social connections through hobbies or community activities.",
+        "goal": "Reduce workplace stress, manage anger, and improve overall emotional well-being.",
+        "key_insight": "Recognizing and addressing emotional triggers can enhance resilience and improve interpersonal relationships."
+    },
+    {
+        "id": 3,
+        "name": "Wang Xiaoyu",
+        "age": 25,
+        "occupation": "Civil Servant",
+        "conditions": {
+            "symptom": ["stress", "dissatisfaction with job", "anger management issues"],
+            "context": ["late working hours", "monotony in life", "lack of personal fulfillment"]
+        },
+        "recommendation": "Incorporate relaxation practices into daily routines. Communicate with the leader effectively to address unreasonable tasks. Identify long-term career aspirations and explore fulfilling hobbies to balance work and life.",
+        "goal": "Enhance job satisfaction, manage stress effectively, and achieve a better work-life balance.",
+        "key_insight": "Balancing work pressure with meaningful personal activities can enhance overall life satisfaction."
+    },
+    {
+        "id": 4,
+        "name": "Unnamed",
+        "age": 30,
+        "occupation": "White-Collar Worker in Shanghai",
+        "conditions": {
+            "symptom": ["work stress", "irritability", "frustration"],
+            "context": ["unreasonable tasks", "stagnant salary", "financial responsibilities"]
+        },
+        "recommendation": "Develop effective communication skills to address issues with the leader. Explore part-time job opportunities to increase income. Practice emotional regulation techniques like mindfulness to manage anger and frustration.",
+        "goal": "Alleviate financial and workplace stress, and achieve emotional stability.",
+        "key_insight": "Balancing communication, financial planning, and emotional regulation can mitigate the effects of overwhelming stress."
+    }
+]
