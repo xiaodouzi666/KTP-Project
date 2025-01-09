@@ -19,7 +19,7 @@ class KnowledgeBase:
                 with open(file_path, 'r', encoding='utf-8') as file:
                     try:
                         all_data[category] = json.load(file)
-                    except json.JSONDecodeError as e:
+                    except json.JSONDecodeError:
                         pass
         return all_data
 
@@ -78,11 +78,18 @@ class InferenceEngine:
 
 
 class Application(tk.Tk):
+    DISCLAIMER_TEXT = (
+        "\n\nDisclaimer:\n"
+        "This system is not a substitute for professional medical or therapeutic advice.\n"
+        "If you are experiencing a medical or mental health emergency, please seek immediate help\n"
+        "from a qualified healthcare professional or appropriate authority."
+    )
+
     def __init__(self, kb):
         super().__init__()
         self.kb = kb
         self.title("Knowledge Expert System")
-        self.geometry("600x400")
+        self.geometry("600x500")
 
         self.create_widgets()
 
@@ -97,6 +104,10 @@ class Application(tk.Tk):
         self.output_area = scrolledtext.ScrolledText(self, width=70, height=15, font=("Arial", 10))
         self.output_area.pack(pady=10)
 
+        # Add disclaimer section at the bottom
+        self.disclaimer_label = tk.Label(self, text=self.DISCLAIMER_TEXT, font=("Arial", 9), wraplength=550, justify="left")
+        self.disclaimer_label.pack(pady=5)
+
     def handle_submit(self):
         user_input = self.input_text.get().strip()
         if not user_input:
@@ -107,6 +118,7 @@ class Application(tk.Tk):
         response = engine.infer(user_input)
         self.output_area.delete("1.0", tk.END)
         self.output_area.insert(tk.END, response)
+        self.output_area.insert(tk.END, self.DISCLAIMER_TEXT)  # Append disclaimer to output area
 
 
 def main():
