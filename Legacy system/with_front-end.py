@@ -61,20 +61,22 @@ class InferenceEngine:
 
     def infer(self, user_input):
         matches = self.kb.query(user_input)
-        if isinstance(matches, str):
+        if isinstance(matches, str):  # No matching category found
             return matches
         if matches:
-            return self.generate_response(matches)
+            return self.generate_dynamic_questions(matches)
         return "No relevant advice found for your input."
 
     @staticmethod
-    def generate_response(matches):
-        response = "Here are some recommendations based on your input:\n"
+    def generate_dynamic_questions(matches):
+        response = "Based on your input, we have the following questions for you:\n"
         for idx, match in enumerate(matches, start=1):
-            recommendation = match.get("recommendation") or match.get("advice", "No specific recommendation available.")
-            response += f"\nRecommendation {idx}:\n"
-            response += f"{recommendation}\n"
+            # Retrieve the first context question from the match
+            question = match.get("conditions", {}).get("context", ["No follow-up question available."])[0]
+            response += f"\nQuestion {idx}: {question}"
+        response += "\n\nPlease answer these questions to help us better understand your concerns."
         return response
+
 
 
 class Application(tk.Tk):

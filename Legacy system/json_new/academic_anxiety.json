@@ -1,0 +1,87 @@
+{
+    "Knowledge base": [
+        {
+            "Disorder": "Academic Anxiety",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming workload",
+                    "Questions": [
+                        "Do you often feel overwhelmed by numerous assignments or tasks?",
+                        "Do you struggle to balance coursework and other activities?"
+                    ],
+                    "Advice": "Try breaking tasks into smaller parts and setting achievable goals."
+                },
+                {
+                    "Name": "Exam fear",
+                    "Questions": [
+                        "Do you feel panicked or scared when thinking about exams?",
+                        "Do you worry about disappointing your parents due to poor exam performance?"
+                    ],
+                    "Advice": "Practice relaxation techniques and focus on self-encouragement."
+                },
+                {
+                    "Name": "Memory and comprehension issues",
+                    "Questions": [
+                        "Do you find it hard to concentrate while studying?",
+                        "Do you struggle to retain information after studying?"
+                    ],
+                    "Advice": "Develop a structured study plan and take regular breaks to improve focus."
+                },
+                {
+                    "Name": "Social isolation",
+                    "Questions": [
+                        "Do you feel disconnected from your classmates or friends?",
+                        "Do you find it hard to communicate with others about your academic stress?"
+                    ],
+                    "Advice": "Participate in group activities or seek support from trusted friends or counselors."
+                },
+                {
+                    "Name": "Procrastination",
+                    "Questions": [
+                        "Do you find yourself delaying tasks until the last minute?",
+                        "Do you struggle to start working on assignments or studying?"
+                    ],
+                    "Advice": "Create a fixed schedule and use time management techniques to avoid procrastination."
+                },
+                {
+                    "Name": "Performance pressure",
+                    "Questions": [
+                        "Do you feel constant pressure to excel academically?",
+                        "Do you fear failing to meet your own or others' expectations?"
+                    ],
+                    "Advice": "Focus on setting realistic goals and prioritize self-care to reduce pressure."
+                },
+                {
+                    "Name": "Sleep disturbances",
+                    "Questions": [
+                        "Do you have trouble falling asleep because of academic worries?",
+                        "Do you wake up feeling unrested and anxious about schoolwork?"
+                    ],
+                    "Advice": "Maintain a consistent sleep schedule and practice relaxation techniques before bed."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Overwhelming workload' AND symptom.name == 'Exam fear'",
+                    "Action": "Suggest time management strategies and mindfulness exercises."
+                },
+                {
+                    "Condition": "symptom.name == 'Memory and comprehension issues'",
+                    "Action": "Focus on improving study techniques and reducing distractions."
+                },
+                {
+                    "Condition": "symptom.name == 'Social isolation'",
+                    "Action": "Encourage communication skills development and group engagement."
+                },
+                {
+                    "Condition": "symptom.name == 'Procrastination' AND symptom.name == 'Performance pressure'",
+                    "Action": "Suggest setting achievable daily goals and practicing self-compassion."
+                },
+                {
+                    "Condition": "symptom.name == 'Sleep disturbances'",
+                    "Action": "Provide resources for managing sleep hygiene and reducing nighttime anxiety."
+                }
+            ]
+        }
+    ]
+}

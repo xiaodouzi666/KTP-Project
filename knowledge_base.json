@@ -1,0 +1,265 @@
+{
+    "Knowledge base": [
+        {
+            "Disorder": "Academic Anxiety",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming workload",
+                    "Questions": [
+                        "Do you often feel overwhelmed by numerous assignments or tasks?",
+                        "Do you struggle to balance coursework and other activities?"
+                    ],
+                    "Advice": "Try breaking tasks into smaller parts and setting achievable goals."
+                },
+                {
+                    "Name": "Exam fear",
+                    "Questions": [
+                        "Do you feel panicked or scared when thinking about exams?",
+                        "Do you worry about disappointing your parents due to poor exam performance?"
+                    ],
+                    "Advice": "Practice relaxation techniques and focus on self-encouragement."
+                },
+                {
+                    "Name": "Memory and comprehension issues",
+                    "Questions": [
+                        "Do you find it hard to concentrate while studying?",
+                        "Do you struggle to retain information after studying?"
+                    ],
+                    "Advice": "Develop a structured study plan and take regular breaks to improve focus."
+                },
+                {
+                    "Name": "Social isolation",
+                    "Questions": [
+                        "Do you feel disconnected from your classmates or friends?",
+                        "Do you find it hard to communicate with others about your academic stress?"
+                    ],
+                    "Advice": "Participate in group activities or seek support from trusted friends or counselors."
+                },
+                {
+                    "Name": "Procrastination",
+                    "Questions": [
+                        "Do you find yourself delaying tasks until the last minute?",
+                        "Do you struggle to start working on assignments or studying?"
+                    ],
+                    "Advice": "Create a fixed schedule and use time management techniques to avoid procrastination."
+                },
+                {
+                    "Name": "Performance pressure",
+                    "Questions": [
+                        "Do you feel constant pressure to excel academically?",
+                        "Do you fear failing to meet your own or others' expectations?"
+                    ],
+                    "Advice": "Focus on setting realistic goals and prioritize self-care to reduce pressure."
+                },
+                {
+                    "Name": "Sleep disturbances",
+                    "Questions": [
+                        "Do you have trouble falling asleep because of academic worries?",
+                        "Do you wake up feeling unrested and anxious about schoolwork?"
+                    ],
+                    "Advice": "Maintain a consistent sleep schedule and practice relaxation techniques before bed."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Overwhelming workload' AND symptom.name == 'Exam fear'",
+                    "Action": "Suggest time management strategies and mindfulness exercises."
+                },
+                {
+                    "Condition": "symptom.name == 'Memory and comprehension issues'",
+                    "Action": "Focus on improving study techniques and reducing distractions."
+                },
+                {
+                    "Condition": "symptom.name == 'Social isolation'",
+                    "Action": "Encourage communication skills development and group engagement."
+                },
+                {
+                    "Condition": "symptom.name == 'Procrastination' AND symptom.name == 'Performance pressure'",
+                    "Action": "Suggest setting achievable daily goals and practicing self-compassion."
+                },
+                {
+                    "Condition": "symptom.name == 'Sleep disturbances'",
+                    "Action": "Provide resources for managing sleep hygiene and reducing nighttime anxiety."
+                }
+            ]
+        },
+        {
+            "Disorder": "Workplace Anxiety",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming workload",
+                    "Questions": [
+                        "Do you often feel overwhelmed by numerous work projects or tasks?",
+                        "Do you struggle to balance your workload and other responsibilities?"
+                    ],
+                    "Advice": "Break tasks into smaller, manageable parts and prioritize tasks to reduce stress."
+                },
+                {
+                    "Name": "Unreasonable work demands",
+                    "Questions": [
+                        "Do you feel that your leader often assigns unreasonable tasks?",
+                        "Do you find it difficult to complete work tasks due to unclear or unreasonable expectations?"
+                    ],
+                    "Advice": "Communicate effectively with your leader to clarify expectations and suggest feasible solutions."
+                },
+                {
+                    "Name": "Financial stress",
+                    "Questions": [
+                        "Do you feel that your income is insufficient to cover your expenses?",
+                        "Do you experience anxiety due to financial pressures such as rent or family support?"
+                    ],
+                    "Advice": "Consider budgeting strategies or exploring additional income opportunities to alleviate financial stress."
+                },
+                {
+                    "Name": "Difficulty managing emotions",
+                    "Questions": [
+                        "Do you often feel irritable or angry at work or home?",
+                        "Do you struggle to control your temper in stressful situations?"
+                    ],
+                    "Advice": "Practice emotional management techniques such as deep breathing, meditation, or mindfulness to improve emotional control."
+                },
+                {
+                    "Name": "Work-life imbalance",
+                    "Questions": [
+                        "Do you feel that work has taken over your personal life?",
+                        "Do you have little time for relaxation or hobbies due to work commitments?"
+                    ],
+                    "Advice": "Establish clear boundaries between work and personal life, and allocate time for leisure activities."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Overwhelming workload' AND symptom.name == 'Unreasonable work demands'",
+                    "Action": "Suggest time management training and effective communication techniques."
+                },
+                {
+                    "Condition": "symptom.name == 'Financial stress'",
+                    "Action": "Provide financial planning resources and advice on managing expenses."
+                },
+                {
+                    "Condition": "symptom.name == 'Difficulty managing emotions' AND symptom.name == 'Work-life imbalance'",
+                    "Action": "Encourage work-life balance practices and emotional self-care routines."
+                }
+            ]
+        },
+        {
+            "Disorder": "Suicidal Tendencies",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming sadness",
+                    "Questions": [
+                        "Do you often feel deeply sad or hopeless?",
+                        "Do you find it hard to find joy in activities you once enjoyed?"
+                    ],
+                    "Advice": "Engage in activities that bring you joy and seek support from trusted individuals."
+                },
+                {
+                    "Name": "Suicidal thoughts",
+                    "Questions": [
+                        "Have you recently thought about ending your life?",
+                        "Do you have a specific plan for suicide?"
+                    ],
+                    "Advice": "Contact a crisis hotline or a mental health professional immediately."
+                },
+                {
+                    "Name": "Physical symptoms of distress",
+                    "Questions": [
+                        "Do you experience severe insomnia or frequent nightmares?",
+                        "Have you noticed changes in your appetite or energy levels?"
+                    ],
+                    "Advice": "Consider consulting a medical professional to address physical symptoms related to distress."
+                },
+                {
+                    "Name": "Coping with loss",
+                    "Questions": [
+                        "Have you recently lost a loved one?",
+                        "Do you find it hard to cope with grief or memories of the deceased?"
+                    ],
+                    "Advice": "Allow yourself to grieve, share memories with others, and consider joining a support group."
+                },
+                {
+                    "Name": "Work and financial pressure",
+                    "Questions": [
+                        "Do you feel overwhelmed by work-related stress or financial difficulties?",
+                        "Do you feel that your efforts are not recognized at work?"
+                    ],
+                    "Advice": "Explore stress management techniques and communicate concerns with a supervisor or trusted colleague."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Suicidal thoughts' AND symptom.name == 'Overwhelming sadness'",
+                    "Action": "Recommend immediate intervention from a mental health professional."
+                },
+                {
+                    "Condition": "symptom.name == 'Coping with loss'",
+                    "Action": "Encourage participation in grief counseling or support groups."
+                },
+                {
+                    "Condition": "symptom.name == 'Work and financial pressure' AND symptom.name == 'Physical symptoms of distress'",
+                    "Action": "Provide resources on managing workplace stress and improving physical well-being."
+                }
+            ]
+        },
+        {
+            "Disorder": "Obsessive-Compulsive Disorder (OCD)",
+            "Symptoms": [
+                {
+                    "Name": "Obsessive thoughts",
+                    "Questions": [
+                        "Do you find yourself repeatedly thinking about the same thing, even when trying to focus on something else?",
+                        "Do you feel anxious or distressed because of recurring unwanted thoughts?"
+                    ],
+                    "Advice": "Practice mindfulness techniques to observe your thoughts without judgment and seek professional counseling if needed."
+                },
+                {
+                    "Name": "Compulsive behaviors",
+                    "Questions": [
+                        "Do you feel compelled to perform certain rituals or actions repeatedly, even when you know they are unnecessary?",
+                        "Do you find it difficult to stop yourself from engaging in repetitive behaviors?"
+                    ],
+                    "Advice": "Work with a therapist to identify triggers and develop coping strategies to reduce compulsive behaviors."
+                },
+                {
+                    "Name": "Difficulty accepting uncertainty",
+                    "Questions": [
+                        "Do you struggle to tolerate uncertainty in daily life?",
+                        "Do you find yourself excessively seeking reassurance from others?"
+                    ],
+                    "Advice": "Gradually expose yourself to uncertain situations and practice accepting outcomes without seeking excessive reassurance."
+                },
+                {
+                    "Name": "Perfectionism",
+                    "Questions": [
+                        "Do you feel an overwhelming need to make everything perfect?",
+                        "Do you find it hard to complete tasks because they never meet your standards?"
+                    ],
+                    "Advice": "Set realistic goals and remind yourself that imperfections are a natural part of life."
+                },
+                {
+                    "Name": "Avoidance behaviors",
+                    "Questions": [
+                        "Do you avoid certain places, people, or tasks because they trigger obsessive thoughts or compulsive actions?",
+                        "Do you find yourself withdrawing from activities you used to enjoy?"
+                    ],
+                    "Advice": "Gradually confront avoided situations in a controlled manner with the support of a therapist."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Obsessive thoughts' AND symptom.name == 'Compulsive behaviors'",
+                    "Action": "Recommend cognitive-behavioral therapy to address both obsessive thoughts and compulsive actions."
+                },
+                {
+                    "Condition": "symptom.name == 'Difficulty accepting uncertainty'",
+                    "Action": "Encourage practicing mindfulness and tolerance for uncertainty through guided exercises."
+                },
+                {
+                    "Condition": "symptom.name == 'Perfectionism' AND symptom.name == 'Avoidance behaviors'",
+                    "Action": "Suggest setting achievable goals and working gradually to re-engage in avoided activities."
+                }
+            ]
+        }
+    ],
+    "Facts": []
+}

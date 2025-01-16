@@ -1,0 +1,63 @@
+{
+    "Knowledge base": [
+        {
+            "Disorder": "Workplace Anxiety",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming workload",
+                    "Questions": [
+                        "Do you often feel overwhelmed by numerous work projects or tasks?",
+                        "Do you struggle to balance your workload and other responsibilities?"
+                    ],
+                    "Advice": "Break tasks into smaller, manageable parts and prioritize tasks to reduce stress."
+                },
+                {
+                    "Name": "Unreasonable work demands",
+                    "Questions": [
+                        "Do you feel that your leader often assigns unreasonable tasks?",
+                        "Do you find it difficult to complete work tasks due to unclear or unreasonable expectations?"
+                    ],
+                    "Advice": "Communicate effectively with your leader to clarify expectations and suggest feasible solutions."
+                },
+                {
+                    "Name": "Financial stress",
+                    "Questions": [
+                        "Do you feel that your income is insufficient to cover your expenses?",
+                        "Do you experience anxiety due to financial pressures such as rent or family support?"
+                    ],
+                    "Advice": "Consider budgeting strategies or exploring additional income opportunities to alleviate financial stress."
+                },
+                {
+                    "Name": "Difficulty managing emotions",
+                    "Questions": [
+                        "Do you often feel irritable or angry at work or home?",
+                        "Do you struggle to control your temper in stressful situations?"
+                    ],
+                    "Advice": "Practice emotional management techniques such as deep breathing, meditation, or mindfulness to improve emotional control."
+                },
+                {
+                    "Name": "Work-life imbalance",
+                    "Questions": [
+                        "Do you feel that work has taken over your personal life?",
+                        "Do you have little time for relaxation or hobbies due to work commitments?"
+                    ],
+                    "Advice": "Establish clear boundaries between work and personal life, and allocate time for leisure activities."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Overwhelming workload' AND symptom.name == 'Unreasonable work demands'",
+                    "Action": "Suggest time management training and effective communication techniques."
+                },
+                {
+                    "Condition": "symptom.name == 'Financial stress'",
+                    "Action": "Provide financial planning resources and advice on managing expenses."
+                },
+                {
+                    "Condition": "symptom.name == 'Difficulty managing emotions' AND symptom.name == 'Work-life imbalance'",
+                    "Action": "Encourage work-life balance practices and emotional self-care routines."
+                }
+            ]
+        }
+    ]
+}

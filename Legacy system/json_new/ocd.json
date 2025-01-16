@@ -1,0 +1,63 @@
+{
+    "Knowledge base": [
+        {
+            "Disorder": "Obsessive-Compulsive Disorder (OCD)",
+            "Symptoms": [
+                {
+                    "Name": "Obsessive thoughts",
+                    "Questions": [
+                        "Do you find yourself repeatedly thinking about the same thing, even when trying to focus on something else?",
+                        "Do you feel anxious or distressed because of recurring unwanted thoughts?"
+                    ],
+                    "Advice": "Practice mindfulness techniques to observe your thoughts without judgment and seek professional counseling if needed."
+                },
+                {
+                    "Name": "Compulsive behaviors",
+                    "Questions": [
+                        "Do you feel compelled to perform certain rituals or actions repeatedly, even when you know they are unnecessary?",
+                        "Do you find it difficult to stop yourself from engaging in repetitive behaviors?"
+                    ],
+                    "Advice": "Work with a therapist to identify triggers and develop coping strategies to reduce compulsive behaviors."
+                },
+                {
+                    "Name": "Difficulty accepting uncertainty",
+                    "Questions": [
+                        "Do you struggle to tolerate uncertainty in daily life?",
+                        "Do you find yourself excessively seeking reassurance from others?"
+                    ],
+                    "Advice": "Gradually expose yourself to uncertain situations and practice accepting outcomes without seeking excessive reassurance."
+                },
+                {
+                    "Name": "Perfectionism",
+                    "Questions": [
+                        "Do you feel an overwhelming need to make everything perfect?",
+                        "Do you find it hard to complete tasks because they never meet your standards?"
+                    ],
+                    "Advice": "Set realistic goals and remind yourself that imperfections are a natural part of life."
+                },
+                {
+                    "Name": "Avoidance behaviors",
+                    "Questions": [
+                        "Do you avoid certain places, people, or tasks because they trigger obsessive thoughts or compulsive actions?",
+                        "Do you find yourself withdrawing from activities you used to enjoy?"
+                    ],
+                    "Advice": "Gradually confront avoided situations in a controlled manner with the support of a therapist."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Obsessive thoughts' AND symptom.name == 'Compulsive behaviors'",
+                    "Action": "Recommend cognitive-behavioral therapy to address both obsessive thoughts and compulsive actions."
+                },
+                {
+                    "Condition": "symptom.name == 'Difficulty accepting uncertainty'",
+                    "Action": "Encourage practicing mindfulness and tolerance for uncertainty through guided exercises."
+                },
+                {
+                    "Condition": "symptom.name == 'Perfectionism' AND symptom.name == 'Avoidance behaviors'",
+                    "Action": "Suggest setting achievable goals and working gradually to re-engage in avoided activities."
+                }
+            ]
+        }
+    ]
+}

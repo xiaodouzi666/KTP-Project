@@ -1,0 +1,63 @@
+{
+    "Knowledge base": [
+        {
+            "Disorder": "Suicidal Tendencies",
+            "Symptoms": [
+                {
+                    "Name": "Overwhelming sadness",
+                    "Questions": [
+                        "Do you often feel deeply sad or hopeless?",
+                        "Do you find it hard to find joy in activities you once enjoyed?"
+                    ],
+                    "Advice": "Engage in activities that bring you joy and seek support from trusted individuals."
+                },
+                {
+                    "Name": "Suicidal thoughts",
+                    "Questions": [
+                        "Have you recently thought about ending your life?",
+                        "Do you have a specific plan for suicide?"
+                    ],
+                    "Advice": "Contact a crisis hotline or a mental health professional immediately."
+                },
+                {
+                    "Name": "Physical symptoms of distress",
+                    "Questions": [
+                        "Do you experience severe insomnia or frequent nightmares?",
+                        "Have you noticed changes in your appetite or energy levels?"
+                    ],
+                    "Advice": "Consider consulting a medical professional to address physical symptoms related to distress."
+                },
+                {
+                    "Name": "Coping with loss",
+                    "Questions": [
+                        "Have you recently lost a loved one?",
+                        "Do you find it hard to cope with grief or memories of the deceased?"
+                    ],
+                    "Advice": "Allow yourself to grieve, share memories with others, and consider joining a support group."
+                },
+                {
+                    "Name": "Work and financial pressure",
+                    "Questions": [
+                        "Do you feel overwhelmed by work-related stress or financial difficulties?",
+                        "Do you feel that your efforts are not recognized at work?"
+                    ],
+                    "Advice": "Explore stress management techniques and communicate concerns with a supervisor or trusted colleague."
+                }
+            ],
+            "Rules": [
+                {
+                    "Condition": "symptom.name == 'Suicidal thoughts' AND symptom.name == 'Overwhelming sadness'",
+                    "Action": "Recommend immediate intervention from a mental health professional."
+                },
+                {
+                    "Condition": "symptom.name == 'Coping with loss'",
+                    "Action": "Encourage participation in grief counseling or support groups."
+                },
+                {
+                    "Condition": "symptom.name == 'Work and financial pressure' AND symptom.name == 'Physical symptoms of distress'",
+                    "Action": "Provide resources on managing workplace stress and improving physical well-being."
+                }
+            ]
+        }
+    ]
+}
