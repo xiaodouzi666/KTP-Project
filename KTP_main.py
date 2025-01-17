@@ -6,7 +6,7 @@ import subprocess  # Import for launching the legacy system
 
 # Initialize the main window
 window = tk.Tk()
-window.geometry("1000x600")
+window.geometry("1200x800")
 window.configure(background='#FF69B4')
 
 user_answer_var = tk.StringVar()
@@ -20,78 +20,100 @@ main_frame = tk.Frame(window, height=400, width=300, background="white")
 main_frame.grid(row=1, column=1)
 
 # Utility functions
+
+
 def clear_frame():
     for widget in main_frame.winfo_children():
         widget.destroy()
+
 
 def update_text_frame(txt):
     label = tk.Label(main_frame, text=txt, bg='white')
     label.pack(pady=20)
 
+
 def update_title_frame(txt):
-    title = tk.Label(main_frame, text=txt, font=("Arial", 16, "bold"), bg='white')
+    title = tk.Label(main_frame, text=txt, font=(
+        "Arial", 16, "bold"), bg='white')
     title.pack(pady=10)
+
 
 def read_file(filename):
     with open(filename, "r") as file:
         return json.load(file)
 
+
 def update_file(data, filename):
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
+
 
 def reset_facts(data, filename):
     data["Facts"] = []
     update_file(data, filename)
 
+
 def on_closing():
     user_answer_var.set("close")
     window.destroy()
 
+
 def welcome(data, filename):
     clear_frame()
-    welcome_msg = tk.Label(main_frame, text="Welcome to the Knowledge-Based Therapy System!", bg='white', font=("Arial", 14))
+    welcome_msg = tk.Label(
+        main_frame, text="Welcome to the Knowledge-Based Therapy System!", bg='white', font=("Arial", 14))
     welcome_msg.pack(pady=20)
 
-    start_btn = tk.Button(main_frame, text="Start", command=lambda: execute_knowledge_base(data, filename))
+    start_btn = tk.Button(main_frame, text="Start",
+                          command=lambda: execute_knowledge_base(data, filename))
     start_btn.pack(pady=10)
 
     # Add legacy system button
-    legacy_btn = tk.Button(window, text="Legacy System", command=open_legacy_system, font=("Arial", 10))
+    legacy_btn = tk.Button(window, text="Legacy System",
+                           command=open_legacy_system, font=("Arial", 10))
     legacy_btn.place(x=10, y=10)  # Position at the top-left corner
+
 
 def open_legacy_system():
     try:
         # Launch the legacy system script
-        subprocess.Popen(["python", "legacy system/with_front-end.py"], shell=True)
+        subprocess.Popen(
+            ["python", "legacy system/with_front-end.py"], shell=True)
     except Exception as e:
         # Display an error message if launching fails
         messagebox.showerror("Error", f"Failed to open legacy system: {e}")
 
+
 def new_question(question):
     clear_frame()
-    question_label = tk.Label(main_frame, text=question, bg='white', font=("Arial", 12))
+    question_label = tk.Label(
+        main_frame, text=question, bg='white', font=("Arial", 12))
     question_label.pack(pady=20)
 
-    yes_btn = tk.Button(main_frame, text="Yes", command=lambda: user_answer_var.set("yes"))
+    yes_btn = tk.Button(main_frame, text="Yes",
+                        command=lambda: user_answer_var.set("yes"))
     yes_btn.pack(side=tk.LEFT, padx=20, pady=10)
 
-    no_btn = tk.Button(main_frame, text="No", command=lambda: user_answer_var.set("no"))
+    no_btn = tk.Button(main_frame, text="No",
+                       command=lambda: user_answer_var.set("no"))
     no_btn.pack(side=tk.RIGHT, padx=20, pady=10)
 
     print(f"Question displayed: {question}")  # 添加日志
 
 # Logic for finding disorders and rules
+
+
 def find_disorder(current_disorder, knowledge_base):
     for disorder in knowledge_base:
         if disorder["Disorder"] == current_disorder:
             return disorder
     return None
 
+
 def evaluate_condition(condition, facts):
     if not condition:
         return False
-    
+
     # 支持解析 AND 和 OR 条件
     conditions = condition.split(" AND ")
     for cond in conditions:
@@ -101,6 +123,7 @@ def evaluate_condition(condition, facts):
         if symptom_name not in facts:  # 正向检查
             return False
     return True
+
 
 def rule_deduction(facts, rules):
     for rule in rules:
@@ -114,6 +137,7 @@ def rule_deduction(facts, rules):
     # 如果没有匹配规则，返回默认建议
     return "No specific issues detected. Please seek general guidance or consult a professional."
 
+
 def execute_knowledge_base(data, filename):
     knowledge_base = data["Knowledge base"]
     facts = data["Facts"]
@@ -124,7 +148,8 @@ def execute_knowledge_base(data, filename):
         current_disorder = disorder["Disorder"]
         disorder_data = find_disorder(current_disorder, knowledge_base)
         if not disorder_data:
-            messagebox.showerror("Error", f"Disorder '{current_disorder}' not found in the knowledge base.")
+            messagebox.showerror("Error", f"Disorder"
+                                 " '{current_disorder}' not found in the knowledge base.")
             continue
 
         # Ask questions and update facts
@@ -162,14 +187,15 @@ def execute_knowledge_base(data, filename):
         "from a qualified healthcare professional or appropriate authority."
     )
     disclaimer_label = tk.Label(
-        main_frame, 
-        text=disclaimer_text, 
-        font=("Arial", 9), 
-        bg='white', 
+        main_frame,
+        text=disclaimer_text,
+        font=("Arial", 9),
+        bg='white',
         wraplength=800,  # Ensure the text wraps within the frame width
         justify="left"
     )
-    disclaimer_label.pack(pady=20, anchor="s")  # Pack with padding and anchor to ensure it stays at the bottom
+    # Pack with padding and anchor to ensure it stays at the bottom
+    disclaimer_label.pack(pady=20, anchor="s")
 
 
 def main():
@@ -177,6 +203,7 @@ def main():
     data = read_file(filename)
     reset_facts(data, filename)
     welcome(data, filename)
+
 
 if __name__ == "__main__":
     main()
