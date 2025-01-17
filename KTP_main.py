@@ -4,10 +4,9 @@ import json
 import sys
 import subprocess  # Import for launching the legacy system
 
-
 # Initialize the main window
 window = tk.Tk()
-window.geometry("1000x500")
+window.geometry("1000x600")
 window.configure(background='#FF69B4')
 
 user_answer_var = tk.StringVar()
@@ -15,7 +14,7 @@ user_answer_var = tk.StringVar()
 # Layout configuration
 for i in range(3):
     window.columnconfigure(i, weight=1, minsize=200)
-    window.rowconfigure(i, weight=1, minsize=100)
+    window.rowconfigure(i, weight=1, minsize=200)
 
 main_frame = tk.Frame(window, height=400, width=300, background="white")
 main_frame.grid(row=1, column=1)
@@ -79,9 +78,8 @@ def new_question(question):
 
     no_btn = tk.Button(main_frame, text="No", command=lambda: user_answer_var.set("no"))
     no_btn.pack(side=tk.RIGHT, padx=20, pady=10)
-    
-    print(f"Question displayed: {question}")  # 添加日志
 
+    print(f"Question displayed: {question}")  # 添加日志
 
 # Logic for finding disorders and rules
 def find_disorder(current_disorder, knowledge_base):
@@ -104,7 +102,6 @@ def evaluate_condition(condition, facts):
             return False
     return True
 
-
 def rule_deduction(facts, rules):
     for rule in rules:
         condition = rule.get("Condition")
@@ -117,18 +114,18 @@ def rule_deduction(facts, rules):
     # 如果没有匹配规则，返回默认建议
     return "No specific issues detected. Please seek general guidance or consult a professional."
 
-
-
 def execute_knowledge_base(data, filename):
-    current_disorder = "Academic Anxiety"
     knowledge_base = data["Knowledge base"]
     facts = data["Facts"]
 
-    while current_disorder:
+    results = {}  # 用于存储每个类别的建议
+
+    for disorder in knowledge_base:
+        current_disorder = disorder["Disorder"]
         disorder_data = find_disorder(current_disorder, knowledge_base)
         if not disorder_data:
             messagebox.showerror("Error", f"Disorder '{current_disorder}' not found in the knowledge base.")
-            return
+            continue
 
         # Ask questions and update facts
         for symptom in disorder_data.get("Symptoms", []):
@@ -149,21 +146,31 @@ def execute_knowledge_base(data, filename):
         # Deduce next step or action
         action = rule_deduction(facts, disorder_data.get("Rules", []))
         if action:
-            current_disorder = None  # End the loop if an action is found
-            clear_frame()
-            update_title_frame("Conclusion")
-            update_text_frame(f"The system suggests: {action}")
-        else:
-            current_disorder = None
-            # Add disclaimer
-        disclaimer_text = (
-            "\n\nDisclaimer:\n"
-            "This system is not a substitute for professional medical or therapeutic advice.\n"
-            "If you are experiencing a medical or mental health emergency, please seek immediate help\n"
-            "from a qualified healthcare professional or appropriate authority."
-        )
-        disclaimer_label = tk.Label(main_frame, text=disclaimer_text, font=("Arial", 9), bg='white', wraplength=500, justify="left")
-        disclaimer_label.pack(pady=20)
+            results[current_disorder] = action
+
+    # Display the final results
+    clear_frame()
+    update_title_frame("Conclusion")
+    for category, advice in results.items():
+        update_text_frame(f"{category}: {advice}")
+
+    # Add disclaimer to ensure it's visible at the end
+    disclaimer_text = (
+        "\n\nDisclaimer:\n"
+        "This system is not a substitute for professional medical or therapeutic advice.\n"
+        "If you are experiencing a medical or mental health emergency, please seek immediate help\n"
+        "from a qualified healthcare professional or appropriate authority."
+    )
+    disclaimer_label = tk.Label(
+        main_frame, 
+        text=disclaimer_text, 
+        font=("Arial", 9), 
+        bg='white', 
+        wraplength=800,  # Ensure the text wraps within the frame width
+        justify="left"
+    )
+    disclaimer_label.pack(pady=20, anchor="s")  # Pack with padding and anchor to ensure it stays at the bottom
+
 
 def main():
     filename = "knowledge_base.json"
