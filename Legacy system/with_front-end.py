@@ -7,10 +7,12 @@ from tkinter import scrolledtext, messagebox
 
 class KnowledgeBase:
     def __init__(self, directory_path):
+        # Initialize the knowledge base with the specified directory path
         self.directory_path = directory_path
         self.data = self.load_all_data()
 
     def load_all_data(self):
+        # Load all JSON files from the specified directory
         all_data = {}
         for file_name in os.listdir(self.directory_path):
             if file_name.endswith(".json"):
@@ -24,7 +26,7 @@ class KnowledgeBase:
         return all_data
 
     def auto_detect_category(self, user_input):
-        # 修改为从 self.data 中加载
+        # Generate a combined text from all conditions and descriptions
         combined_text = ""
         for category, records in self.data.items():
             for record in records:
@@ -38,10 +40,11 @@ class KnowledgeBase:
 
     @staticmethod
     def similarity(text1, text2):
+        # Calculate similarity between two texts using SequenceMatcher
         return SequenceMatcher(None, text1.lower(), text2.lower()).ratio()
 
     def query(self, user_input):
-        # 默认类别检测逻辑
+        # Query the knowledge base based on user input
         results = []
         for category, records in self.data.items():
             for record in records:
@@ -54,9 +57,11 @@ class KnowledgeBase:
 
 class InferenceEngine:
     def __init__(self, knowledge_base):
+        # Initialize the inference engine with the knowledge base
         self.kb = knowledge_base
 
     def infer(self, user_input):
+        # Infer results based on user input
         matches = self.kb.query(user_input)
         if isinstance(matches, str):  # No matching records
             return matches
@@ -66,6 +71,7 @@ class InferenceEngine:
 
     @staticmethod
     def generate_dynamic_questions(matches):
+        # Generate dynamic questions based on matching records
         response = "Based on your input, we have the following questions for you:\n"
         for idx, match in enumerate(matches, start=1):
             question = match.get("conditions", {}).get("context", ["No follow-up question available."])[0]
@@ -83,6 +89,7 @@ class Application(tk.Tk):
     )
 
     def __init__(self, kb):
+        # Initialize the Tkinter application with the knowledge base
         super().__init__()
         self.kb = kb
         self.title("Knowledge Expert System")
@@ -90,6 +97,7 @@ class Application(tk.Tk):
         self.create_widgets()
 
     def create_widgets(self):
+        # Create and arrange widgets for the application
         tk.Label(self, text="Describe your problem or symptom:", font=("Arial", 12)).pack(pady=10)
         self.input_text = tk.Entry(self, width=60, font=("Arial", 12))
         self.input_text.pack(pady=5)
@@ -102,6 +110,7 @@ class Application(tk.Tk):
         self.disclaimer_label.pack(pady=5)
 
     def handle_submit(self):
+        # Handle the submit button click event
         user_input = self.input_text.get().strip()
         if not user_input:
             messagebox.showwarning("Input Error", "Please enter a description of your problem.")
@@ -114,7 +123,8 @@ class Application(tk.Tk):
 
 
 def main():
-    knowledge_base_directory = "./legacy system"  # 调整路径到 legacy system 文件夹
+    # Main function to initialize and run the application
+    knowledge_base_directory = "./legacy system"  # Adjust path to the legacy system folder
     if not os.path.exists(knowledge_base_directory):
         print(f"Error: Directory '{knowledge_base_directory}' does not exist.")
         return

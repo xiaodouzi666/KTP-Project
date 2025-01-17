@@ -23,42 +23,50 @@ main_frame.grid(row=1, column=1)
 
 
 def clear_frame():
+    # Clear all widgets from the main frame
     for widget in main_frame.winfo_children():
         widget.destroy()
 
 
 def update_text_frame(txt):
+    # Update the main frame with text content
     label = tk.Label(main_frame, text=txt, bg='white')
     label.pack(pady=20)
 
 
 def update_title_frame(txt):
+    # Update the main frame with a title
     title = tk.Label(main_frame, text=txt, font=(
         "Arial", 16, "bold"), bg='white')
     title.pack(pady=10)
 
 
 def read_file(filename):
+    # Read data from a JSON file
     with open(filename, "r") as file:
         return json.load(file)
 
 
 def update_file(data, filename):
+    # Write updated data to a JSON file
     with open(filename, "w") as file:
         json.dump(data, file, indent=4)
 
 
 def reset_facts(data, filename):
+    # Reset facts in the JSON file
     data["Facts"] = []
     update_file(data, filename)
 
 
 def on_closing():
+    # Handle window closing event
     user_answer_var.set("close")
     window.destroy()
 
 
 def welcome(data, filename):
+    # Display the welcome screen
     clear_frame()
     welcome_msg = tk.Label(
         main_frame, text="Welcome to the Knowledge-Based Therapy System!", bg='white', font=("Arial", 14))
@@ -75,8 +83,8 @@ def welcome(data, filename):
 
 
 def open_legacy_system():
+    # Launch the legacy system script
     try:
-        # Launch the legacy system script
         subprocess.Popen(
             ["python", "legacy system/with_front-end.py"], shell=True)
     except Exception as e:
@@ -85,6 +93,7 @@ def open_legacy_system():
 
 
 def new_question(question):
+    # Display a new question on the main frame
     clear_frame()
     question_label = tk.Label(
         main_frame, text=question, bg='white', font=("Arial", 12))
@@ -98,12 +107,13 @@ def new_question(question):
                        command=lambda: user_answer_var.set("no"))
     no_btn.pack(side=tk.RIGHT, padx=20, pady=10)
 
-    print(f"Question displayed: {question}")  # 添加日志
+    print(f"Question displayed: {question}")  # Log question displayed
 
 # Logic for finding disorders and rules
 
 
 def find_disorder(current_disorder, knowledge_base):
+    # Find a disorder in the knowledge base by its name
     for disorder in knowledge_base:
         if disorder["Disorder"] == current_disorder:
             return disorder
@@ -111,21 +121,23 @@ def find_disorder(current_disorder, knowledge_base):
 
 
 def evaluate_condition(condition, facts):
+    # Evaluate a condition against the collected facts
     if not condition:
         return False
 
-    # 支持解析 AND 和 OR 条件
+    # Support parsing AND and OR conditions
     conditions = condition.split(" AND ")
     for cond in conditions:
         symptom_name = cond.split("==")[1].strip().strip("'")
-        if f"no {symptom_name}" in facts:  # 否定检查
+        if f"no {symptom_name}" in facts:  # Negative check
             return False
-        if symptom_name not in facts:  # 正向检查
+        if symptom_name not in facts:  # Positive check
             return False
     return True
 
 
 def rule_deduction(facts, rules):
+    # Deduce the next step or action based on rules
     for rule in rules:
         condition = rule.get("Condition")
         if evaluate_condition(condition, facts):
@@ -134,15 +146,16 @@ def rule_deduction(facts, rules):
         else:
             print(f"Condition not met: {condition}. Current facts: {facts}")
 
-    # 如果没有匹配规则，返回默认建议
+    # Return default advice if no rules are matched
     return "No specific issues detected. Please seek general guidance or consult a professional."
 
 
 def execute_knowledge_base(data, filename):
+    # Execute the knowledge base to provide advice
     knowledge_base = data["Knowledge base"]
     facts = data["Facts"]
 
-    results = {}  # 用于存储每个类别的建议
+    results = {}  # Store advice for each category
 
     for disorder in knowledge_base:
         current_disorder = disorder["Disorder"]
@@ -199,6 +212,7 @@ def execute_knowledge_base(data, filename):
 
 
 def main():
+    # Main function to initialize the program
     filename = "knowledge_base.json"
     data = read_file(filename)
     reset_facts(data, filename)
