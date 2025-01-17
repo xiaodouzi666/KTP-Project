@@ -8,7 +8,7 @@ import subprocess  # Import for launching the legacy system
 # Initialize the main window
 window = tk.Tk()
 window.geometry("1000x500")
-window.configure(background='#9DD9F3')
+window.configure(background='#FF69B4')
 
 user_answer_var = tk.StringVar()
 
