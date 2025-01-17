@@ -20,39 +20,36 @@ class KnowledgeBase:
                     try:
                         all_data[category] = json.load(file)
                     except json.JSONDecodeError:
-                        pass
+                        print(f"Error: Failed to decode {file_name}")
         return all_data
 
     def auto_detect_category(self, user_input):
-        best_match = None
-        highest_score = 0
+        # 修改为从 self.data 中加载
+        combined_text = ""
         for category, records in self.data.items():
             for record in records:
-                combined_text = " ".join(record.get("conditions", {}).get("symptom", []) +
-                                         record.get("conditions", {}).get("context", []))
-                score = self.similarity(user_input, combined_text)
-                if score > highest_score:
-                    highest_score = score
-                    best_match = category
-        return best_match
+                if isinstance(record, dict):
+                    conditions = record.get("conditions", {})
+                    combined_text += " ".join(
+                        conditions.get("symptom", []) +
+                        conditions.get("description", [])
+                    )
+        return combined_text
 
     @staticmethod
     def similarity(text1, text2):
         return SequenceMatcher(None, text1.lower(), text2.lower()).ratio()
 
     def query(self, user_input):
-        category = self.auto_detect_category(user_input)
-        if not category:
-            return "No matching category found."
-
+        # 默认类别检测逻辑
         results = []
-        for record in self.data.get(category, []):
-            combined_conditions = " ".join(record.get("conditions", {}).get("symptom", []) +
-                                           record.get("conditions", {}).get("context", []))
-            if any(word.lower() in combined_conditions.lower() for word in user_input.split()):
-                results.append(record)
-
-        return results
+        for category, records in self.data.items():
+            for record in records:
+                combined_conditions = " ".join(record.get("conditions", {}).get("symptom", []) +
+                                               record.get("conditions", {}).get("context", []))
+                if any(word.lower() in combined_conditions.lower() for word in user_input.split()):
+                    results.append(record)
+        return results if results else "No relevant records found."
 
 
 class InferenceEngine:
@@ -61,7 +58,7 @@ class InferenceEngine:
 
     def infer(self, user_input):
         matches = self.kb.query(user_input)
-        if isinstance(matches, str):  # No matching category found
+        if isinstance(matches, str):  # No matching records
             return matches
         if matches:
             return self.generate_dynamic_questions(matches)
@@ -71,12 +68,10 @@ class InferenceEngine:
     def generate_dynamic_questions(matches):
         response = "Based on your input, we have the following questions for you:\n"
         for idx, match in enumerate(matches, start=1):
-            # Retrieve the first context question from the match
             question = match.get("conditions", {}).get("context", ["No follow-up question available."])[0]
             response += f"\nQuestion {idx}: {question}"
         response += "\n\nPlease answer these questions to help us better understand your concerns."
         return response
-
 
 
 class Application(tk.Tk):
@@ -92,22 +87,18 @@ class Application(tk.Tk):
         self.kb = kb
         self.title("Knowledge Expert System")
         self.geometry("600x500")
-
         self.create_widgets()
 
     def create_widgets(self):
         tk.Label(self, text="Describe your problem or symptom:", font=("Arial", 12)).pack(pady=10)
-
         self.input_text = tk.Entry(self, width=60, font=("Arial", 12))
         self.input_text.pack(pady=5)
-
         tk.Button(self, text="Submit", command=self.handle_submit, font=("Arial", 12)).pack(pady=10)
-
         self.output_area = scrolledtext.ScrolledText(self, width=70, height=15, font=("Arial", 10))
         self.output_area.pack(pady=10)
-
-        # Add disclaimer section at the bottom
-        self.disclaimer_label = tk.Label(self, text=self.DISCLAIMER_TEXT, font=("Arial", 9), wraplength=550, justify="left")
+        self.disclaimer_label = tk.Label(
+            self, text=self.DISCLAIMER_TEXT, font=("Arial", 9), wraplength=550, justify="left"
+        )
         self.disclaimer_label.pack(pady=5)
 
     def handle_submit(self):
@@ -115,7 +106,6 @@ class Application(tk.Tk):
         if not user_input:
             messagebox.showwarning("Input Error", "Please enter a description of your problem.")
             return
-
         engine = InferenceEngine(self.kb)
         response = engine.infer(user_input)
         self.output_area.delete("1.0", tk.END)
@@ -124,7 +114,10 @@ class Application(tk.Tk):
 
 
 def main():
-    knowledge_base_directory = "./" 
+    knowledge_base_directory = "./legacy system"  # 调整路径到 legacy system 文件夹
+    if not os.path.exists(knowledge_base_directory):
+        print(f"Error: Directory '{knowledge_base_directory}' does not exist.")
+        return
     kb = KnowledgeBase(knowledge_base_directory)
     app = Application(kb)
     app.mainloop()
